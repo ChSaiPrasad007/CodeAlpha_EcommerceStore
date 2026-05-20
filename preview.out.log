@@ -1,0 +1,25 @@
+STEP 1: Go to Your Project Folder
+
+In PowerShell type:
+
+cd "C:\Users\hp\OneDrive\Documents\New project"
+
+
+STEP 2: Install Project Packages
+
+Now run:
+
+npm install
+
+STEP 3: Start the Website
+
+After installation finishes, run:
+
+npm start
+
+
+STEP 4: Open Website
+
+Open browser and go to:
+
+http://localhost:3000

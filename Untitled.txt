@@ -1,0 +1,109 @@
+	
+
+
+This internship is designed to help you build future-ready skills in:
+• Artificial Intelligence
+• Sustainability & Sustainable Development Goals (SDGs)
+• Responsible Innovation
+• Real-World Project Development & Execution
+
+
+
+Throughout the virtual internship, participants will be guided by 1M1B mentors who bring rich experience in AI, sustainability, and innovation-driven education. The mentoring sessions are designed to support students at every stage, from ideation and design thinking to project development and presentation. Mentors provide personalized feedback, help refine project ideas, and ensure alignment with Sustainable Development Goals (SDGs). Through continuous interaction, students gain insights into real-world problem-solving, industry expectations, and career pathways in emerging technologies, empowering them to become confident and purpose-driven innovators.
+
+
+
+Task
+Mind Meets Machine – The AI & Sustainability Expert Series
+
+Description
+The program features a series of interactive sessions led by IBM experts and 1M1B mentors, providing real-world exposure to advanced AI tools, frameworks, and applications.
+Key sessions include:
+
+Understanding SDGs & Foundations of AI/LLMs
+Ethics & Responsible AI
+Hands-on with IBM Granite Models
+Agentic AI – Building Autonomous Systems
+Retrieval-Augmented Generation (RAG) Deep Dive
+Design Thinking & Project Ideation
+Project Mentorship and Prototype Review
+Learning Outcomes
+
+By the end of the internship, participants will:
+
+Understand the foundations of AI, ML, and LLMs, and their role in sustainable development.
+Apply principles of Responsible AI — ethics, fairness, and transparency.
+Gain hands-on experience with IBM Granite Models, RAG, and Agentic AI systems.
+Develop and present a capstone project demonstrating AI-powered problem-solving for SDGs.
+The link for the sessions are shared with you in the welcome mail.
+
+bout this learning activity
+What if AI could pull updated and accurate information in real time before providing responses? Retrieval-augmented generation (RAG) makes this possible. In this module, you’ll learn what RAG is and identify its key use cases. Next, you’ll explore the benefits of using RAG to enhance the knowledge base of an AI model. Finally, you’ll find out the key steps in the RAG workflow.
+
+ 
+
+What you’ll learn
+
+After completing this module, you should be able to:
+
+Identify the key use cases for RAG
+Explain the benefits of using RAG to expand the knowledge base of a large language model
+Describe the key steps in a RAG workflow
+ 
+
+Lessons
+
+An overview of retrieval-augmented generation
+Benefits of implementing RAG
+How does RAG work?
+Simulation: Enhancing a large language model using RAG
+
+
+About this learning activity
+Artificial intelligence (AI) agents are pushing the boundaries of automation and decision making to transform the way you work. In this module, you’ll learn about AI agents, how they perform tasks, and the different types of AI agents that exist. You’ll learn how to identify key use cases where AI agents improve efficiency and categorize them based on how they perform tasks. Finally, you’ll learn how AI agents work and where they’re making an impact today.
+
+ 
+
+What you’ll learn
+
+After completing this module, you should be able to:
+
+Identify the key use cases for AI agents
+Categorize AI agents based on their characteristics and applications
+Describe how AI agents perform tasks
+ 
+
+Lessons
+
+Overview of AI agents
+AI agent types and their applications
+How do AI agents work?
+Simulation: Personalizing fitness with an AI agent
+
+
+ About this learning activity
+Select Go to activity to launch the content!
+
+
+The next evolution of AI focuses on AI agents collaborating, competing, and adapting together. In this module, you learn about multiagent systems and how they differ from single-agent systems. You explore how agents interact and work together and discover the ways these systems solve complex problems across different industries. Through practical examples, you uncover the power of agents collaborating to create innovative solutions.
+
+What you’ll learn
+
+After completing this module, you should be able to:
+
+Distinguish between multiagent systems and single-agent systems
+Categorize multiagent systems based on how individual agents interact with each other
+Identify the benefits and use cases of multiagent systems across industries
+ 
+
+Lessons
+
+Introduction to multiagent systems
+Types of multiagent systems
+Applications of multiagent systems
+Simulation: Automating procurement with multiagent systems
+ 
+
+Languages: English, Arabic, Spanish, Brazilian Portuguese, Indonesian, Japanese, Turkish
+
+

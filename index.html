@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketLane Commerce</title>
+    <meta
+      name="description"
+      content="A basic e-commerce site with products, cart, checkout, login, registration, and order storage."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#shop" aria-label="MarketLane home">
+        <span class="brand-mark">ML</span>
+        <span>
+          <strong>MarketLane</strong>
+          <small>Modern essentials</small>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#shop" data-nav="shop">Shop</a>
+        <a href="#orders" data-nav="orders">Orders</a>
+      </nav>
+
+      <label class="search-box">
+        <span>Search</span>
+        <input id="searchInput" type="search" placeholder="Search products" autocomplete="off" />
+      </label>
+
+      <div class="header-actions">
+        <button class="ghost-button" id="authButton" type="button">Login</button>
+        <button class="ghost-button hidden" id="logoutButton" type="button">Logout</button>
+        <button class="cart-button" id="cartButton" type="button" aria-label="Open cart">
+          <span>Cart</span>
+          <strong id="cartCount">0</strong>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="view shop-view" id="shopView">
+        <section class="storefront-top">
+          <div>
+            <p class="eyebrow">Product catalog</p>
+            <h1>Shop practical goods for home, work, and everyday carry.</h1>
+          </div>
+          <div class="storefront-stats" aria-label="Store summary">
+            <span><strong id="productCount">0</strong> products</span>
+            <span>Free shipping over $75</span>
+          </div>
+        </section>
+
+        <section class="toolbar" aria-label="Catalog controls">
+          <label class="field compact">
+            <span>Category</span>
+            <select id="categoryFilter">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label class="field compact">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="product-grid" id="productGrid" aria-live="polite"></section>
+      </section>
+
+      <section class="view detail-view hidden" id="detailView" aria-live="polite"></section>
+
+      <section class="view orders-view hidden" id="ordersView">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Order processing</p>
+            <h2>Your orders</h2>
+          </div>
+          <button class="ghost-button" id="refreshOrdersButton" type="button">Refresh</button>
+        </div>
+        <div class="orders-list" id="ordersList"></div>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">Shopping cart</p>
+          <h2>Checkout</h2>
+        </div>
+        <button class="icon-button" id="closeCartButton" type="button" aria-label="Close cart">X</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <section class="cart-summary" aria-label="Cart totals">
+        <div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+        <div><span>Tax</span><strong id="cartTax">$0.00</strong></div>
+        <div><span>Shipping</span><strong id="cartShipping">$0.00</strong></div>
+        <div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      </section>
+
+      <form class="checkout-form" id="checkoutForm">
+        <div class="section-heading tight">
+          <div>
+            <p class="eyebrow">Shipping details</p>
+            <h3>Delivery address</h3>
+          </div>
+        </div>
+        <label class="field">
+          <span>Name</span>
+          <input id="shippingName" type="text" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input id="shippingEmail" type="email" autocomplete="email" required />
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input id="shippingPhone" type="tel" autocomplete="tel" />
+        </label>
+        <label class="field">
+          <span>Street address</span>
+          <input id="shippingAddress" type="text" autocomplete="street-address" required />
+        </label>
+        <div class="form-row">
+          <label class="field">
+            <span>City</span>
+            <input id="shippingCity" type="text" autocomplete="address-level2" required />
+          </label>
+          <label class="field">
+            <span>State</span>
+            <input id="shippingState" type="text" autocomplete="address-level1" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="field">
+            <span>ZIP</span>
+            <input id="shippingZip" type="text" autocomplete="postal-code" required />
+          </label>
+          <label class="field">
+            <span>Payment</span>
+            <select id="paymentMethod">
+              <option value="Card">Card</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+          </label>
+        </div>
+        <button class="primary-button full-button" id="checkoutButton" type="submit">Place Order</button>
+      </form>
+    </aside>
+
+    <div class="scrim hidden" id="scrim"></div>
+
+    <section class="auth-modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">Account</p>
+          <h2 id="authTitle">Login</h2>
+        </div>
+        <button class="icon-button" id="closeAuthButton" type="button" aria-label="Close login">X</button>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Authentication">
+        <button class="auth-tab active" type="button" data-auth-panel="login">Login</button>
+        <button class="auth-tab" type="button" data-auth-panel="signup">Signup</button>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <label class="field">
+          <span>Email</span>
+          <input id="loginEmail" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Enter password" />
+        </label>
+        <button class="primary-button full-button" type="submit">Login</button>
+        <p class="form-note" id="loginNote"></p>
+      </form>
+
+      <form class="auth-form hidden" id="signupForm">
+        <label class="field">
+          <span>Full name</span>
+          <input id="signupName" type="text" autocomplete="name" required placeholder="Your name" />
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input id="signupEmail" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input
+            id="signupPassword"
+            type="password"
+            autocomplete="new-password"
+            minlength="6"
+            required
+            placeholder="Minimum 6 characters"
+          />
+        </label>
+        <button class="primary-button full-button" type="submit">Create Account</button>
+        <p class="form-note" id="signupNote"></p>
+      </form>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

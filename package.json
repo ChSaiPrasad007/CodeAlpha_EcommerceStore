@@ -1,0 +1,28 @@
+{
+  "name": "marketlane-commerce",
+  "version": "1.0.0",
+  "description": "A basic e-commerce site with product listings, product details, cart, checkout, auth, and order storage.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopping-cart",
+    "express",
+    "mongodb",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
